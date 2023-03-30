@@ -1,0 +1,263 @@
+.sign-in {
+  position: relative;
+}
+
+.menu_sign_in {
+  display: flex;
+  position: absolute;
+  justify-content: space-around;
+  top: 32px;
+  right: 0px;
+
+  z-index: $login-modal-z-index;
+  width: 142px;
+
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 500ms cubic-bezier(0.19, 1, 0.22, 1) visibility 500ms
+    cubic-bezier(0.19, 1, 0.22, 1);
+  background-color: #161616;
+  border: $borger-lightgray;
+  border-radius: 10px;
+  padding: 10px;
+
+  gap: 10px;
+
+  box-shadow: $box-shadow;
+}
+
+.btn-sign-in {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-basis: calc(100% / 2);
+  height: 30px;
+
+  border: 1px solid $white;
+  border-radius: 5px;
+  color: $white;
+  background-color: transparent;
+
+  transition-property: all;
+  transition-duration: $time-cubic;
+  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+
+  &:hover,
+  &:focus {
+    color: orange;
+    border-color: #ff6b08;
+
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(255, 106, 0, 1);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(255, 106, 0, 1);
+    box-shadow: 0px 0px 20px 0px rgba(255, 106, 0, 1);
+  }
+}
+
+.btn-sign-in_icon {
+  fill: currentColor;
+}
+
+.no-scroll-body {
+  overflow: hidden;
+  overflow-y: hidden;
+}
+
+// ------MODAL SIGN_IN ------
+
+.backdrop_menu_sign_in {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgb(0, 0, 0, 0.7);
+
+  visibility: visible;
+  opacity: 2;
+  pointer-events: auto;
+
+  z-index: $login-modal-backdrop-z-index;
+}
+// ----Modal windiw----
+.menu_sign_in_new {
+  display: flex;
+  flex-direction: column;
+  padding: 25px 10px;
+  text-align: center;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  z-index: 900;
+
+  visibility: visible;
+  opacity: 1;
+
+  background-color: $white;
+
+  border-radius: 10px;
+  border: 1px solid #161616;
+  box-shadow: 0px 0px 12px rgba(255, 100, 1, 0.4);
+  max-width: 500px;
+  width: 400px;
+  min-height: 300px;
+  justify-content: space-evenly;
+  // transition: 250ms ease-in-out 20ms;
+  transition: all 300ms ease;
+}
+
+.firebaseui-idp-list {
+  margin-top: 20px;
+}
+.firebaseui-idp-list > .firebaseui-list-item {
+  margin-bottom: 10px;
+}
+
+.firebaseui-idp-button {
+  font-size: 25px;
+  padding-left: 25px;
+}
+// ----Title Welcome to Filmoteka----
+.title {
+  font-size: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid $grey;
+  color: $orange-button;
+}
+// ----Title Sign in with email---
+.firebaseui-card-header {
+  padding-top: 10px;
+}
+
+// --Title Create account--
+.firebaseui-title {
+  text-align: center;
+  color: $orange-button;
+  padding-bottom: 5px;
+}
+
+.firebaseui-card-content {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+// ----Button Sigh with email, googl---
+// --Text Sign in with email, googl--
+
+.firebaseui-idp-text {
+  transition: all 250ms;
+  &:hover,
+  &:focus {
+    color: #c8c5c5;
+  }
+}
+
+// ----Button Cancel----
+.firebaseui-id-secondary-link {
+  color: $black !important;
+  text-align: center;
+  margin-right: 7px;
+
+  border: $borger-lightgray;
+  background-color: rgb(256, 256, 256);
+  box-shadow: $box-shadow;
+  border-radius: 5px;
+  transition: all 300ms ease-in-out;
+  &:hover,
+  &:focus {
+    background-color: $grey-background;
+  }
+}
+
+// ----Button Next----
+.mdl-button--raised.mdl-button--colored {
+  background-color: #ff6b01;
+  border-radius: 5px;
+  box-shadow: 0 0 2px 0 hsl(200, 100%, 6%, 0.7);
+  transition: all 300ms;
+  &:hover,
+  &:focus {
+    background-color: #ff6b01;
+    color: black;
+  }
+}
+
+.firebaseui-card-actions {
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.firebaseui-form-actions {
+  width: auto;
+}
+
+.mdl-textfield__label {
+  font-family: $main-font;
+}
+
+// ----Form----
+.mdl-card {
+  margin-top: 10px;
+  // --color: hsl(200, 100%, 6%, .7);
+  --color: rgba(111, 118, 122, 0.9);
+  background-color: $white;
+  box-shadow: 0 0 15px 0 $grey;
+  padding: 8px 10px;
+}
+
+// ----Input----
+// --Колір всередині інпута--
+#ui-sign-in-email-input {
+  font-size: 12px;
+  color: black;
+  padding-left: 10px;
+  padding-top: 5px;
+}
+
+// -- Text : Email , firs last name--
+.mdl-textfield--floating-label .mdl-textfield__label {
+  font-size: 12px;
+  color: black;
+  padding-left: 10px;
+  padding-top: 5px;
+}
+
+// Розмір email, password, first last name
+.mdl-textfield__label {
+  font-size: 12px;
+}
+
+// --Сам пароль--
+#ui-sign-in-new-password-input {
+  font-size: 12px;
+  // padding-bottom: 7px;
+}
+
+// --Нижнє підкреслювання при ховері і фокусі
+.firebaseui-textfield.mdl-textfield .firebaseui-label {
+  transition: all 300ms;
+  &::after {
+    background-color: #ec995e;
+  }
+}
+
+// --Text in input--
+// .firebaseui-textfield.mdl-textfield .firebaseui-input {
+// }
+
+.firebaseui-textfield.mdl-textfield .firebaseui-input {
+  font-size: 12px;
+  color: black;
+  padding-left: 10px;
+  padding-top: 5px;
+
+  border-bottom: 2px solid #c6c6c6;
+  outline: none;
+
+  color: $black;
+}

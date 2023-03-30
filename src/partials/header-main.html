@@ -1,0 +1,101 @@
+<header class="header">
+  <div class="header-container">
+    <nav class="nav header__nav">
+      <a class="logo__link" href="">
+        <svg class="logo__icon" width="24" height="24">
+          <use href="./images/symbol-defs_minNN.svg#icon-logo"></use>
+        </svg>
+        <span class="logo-text">Filmoteka </span>
+      </a>
+      <ul class="site-nav list">
+        <li class="site-nav__item">
+          <a
+            class="site-nav__link site-nav__link--current link"
+            href="./index.html"
+            >Home</a
+          >
+        </li>
+        <li class="site-nav__item">
+          <a
+            class="site-nav__link site-nav__link--no-current link site-nav__to_library"
+            href="./my-library.html"
+            >my library</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <div class="sign-in">
+      <div class="changeMode">
+        <button type="button" class="button reset_theme">x</button>
+        <input type="checkbox" class="checkbox switch_theme" id="checkbox" />
+        <label for="checkbox" class="checkbox-label">
+          <i class="fas fa-sun"></i>
+          <i class="fas fa-moon"></i>
+          <span class="ball"></span>
+        </label>
+      </div>
+
+      <button class="signInButton" type="button" id="signInButton">
+        <svg class="signInButton_icon" width="20" height="20">
+          <use href="./images/symbol-defs_minNN.svg#icon-login_min"></use>
+        </svg>
+        Sign in with
+      </button>
+
+      <button
+        class="signInButton visually-hidden"
+        type="button"
+        id="signOutButton"
+      >
+        Sign out
+        <svg class="signInButton_icon" width="15" height="15">
+          <use href="./images/symbol-defs_minNN.svg#icon-log_out"></use>
+        </svg>
+      </button>
+      <!-- Костюченко Сергій -->
+      <!-- <include src="./partials/menu-signin-out.html"></include> -->
+    </div>
+
+    <form action="" class="form header__form" id="searchForm">
+      <input
+        class="header__input"
+        type="text"
+        placeholder="Movie search"
+        name="searchQuery"
+      />
+      <button class="submit-button button" type="submit" id="submitButton">
+        <svg class="submit__icon" width="12" height="12">
+          <use href="./images/symbol-defs_minNN.svg#icon-search"></use>
+        </svg>
+      </button>
+    </form>
+    <form id="sortForm">
+      <select name="genre" id="genreSelect">
+        <option value="">Select genre</option>
+      </select>
+      <select name="year" id="yearSelect">
+        <option value="">Select year</option>
+      </select>
+      <select name="sortBy" id="sortSelect">
+        <option value="">Sort by</option>
+        <option value="original_title.desc">Title</option>
+        <option value="popularity.desc">Popularity (HIGH - LOW)</option>
+        <option value="popularity.asc">Popularity (LOW - HIGH)</option>
+        <option value="vote_average.desc">Rating (HIGH - LOW)</option>
+        <option value="vote_average.asc">Rating (LOW - HIGH)</option>
+        <option value="primary_release_date.desc">
+          Release date (HIGH - LOW)
+        </option>
+        <option value="primary_release_date.asc">
+          Release date (LOW - HIGH)
+        </option>
+      </select>
+      <button type="submit">Find</button>
+      <button type="reset" name="resetBtn">Reset</button>
+    </form>
+    <!-- <p class="header__error-message" id="errorMessage">
+      Search result not successful. Enter the correct movie name and try again.
+    </p> -->
+  </div>
+</header>
